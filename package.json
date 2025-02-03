@@ -1,0 +1,36 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Mark-Gruzdov/backend-project-4/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mark-Gruzdov/backend-project-4/actions)",
+  "main": "src/pageLoader.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mark-Gruzdov/backend-project-4.git"
+  },
+  "bin": {
+    "page-loader": "bin/pageLoader.js"
+  },
+  "author": "Gruzdov Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mark-Gruzdov/backend-project-4/issues"
+  },
+  "homepage": "https://github.com/Mark-Gruzdov/backend-project-4#readme",
+  "devDependencies": {
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "jest": "^29.7.0",
+    "nock": "^13.5.6"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "commander": "^13.1.0",
+    "lodash": "^4.17.21",
+    "rimraf": "^6.0.1"
+  }
+}
