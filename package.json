@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "page-loader",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Mark-Gruzdov/backend-project-4/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mark-Gruzdov/backend-project-4/actions)",
   "main": "src/pageLoader.js",
