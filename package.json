@@ -14,7 +14,7 @@
   "bin": {
     "page-loader": "bin/pageLoader.js"
   },
-  "author": "Gruzdov Mark",
+  "author": "Mark-Gruzdov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mark-Gruzdov/backend-project-4/issues"
