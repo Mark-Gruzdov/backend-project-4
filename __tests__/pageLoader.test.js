@@ -40,7 +40,6 @@ beforeEach(async () => {
 
 test('html data is correcly loaded', async () => {
   const filePath = await pageLoader(`${mockUrl}/courses`, tempDir);
-  console.log(`filepath >>> ${filePath}`);
   await expect(readFile(filePath, 'utf-8')).resolves.toEqual(mockData);
 });
 
