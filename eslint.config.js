@@ -22,6 +22,7 @@ export default [
 
         // Глобальные переменные Jest
         beforeEach: 'readonly',
+        beforeAll: 'readonly',
         test: 'readonly',
         expect: 'readonly',
         describe: 'readonly',
