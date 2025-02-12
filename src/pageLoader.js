@@ -131,3 +131,5 @@ export const pageLoader = async (url, dir = process.cwd()) => {
     .then((formatedHtml) => fs.writeFile(absolutePath, formatedHtml))
     .then(() => absolutePath);
   };
+
+export default pageLoader;
