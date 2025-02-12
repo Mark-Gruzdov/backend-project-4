@@ -28,4 +28,4 @@ PageLoader – утилита командной строки, которая с
 
 <!-- DEMO -->
 
-[![asciicast](https://asciinema.org/a/703057.svg)](https://asciinema.org/a/703057)
+[![asciicast](https://asciinema.org/a/703059.svg)](https://asciinema.org/a/703059)
