@@ -5,7 +5,8 @@
   "main": "src/pageLoader.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "debug": "DEBUG=page-loader node bin/pageLoader.js -o /var/tmp https://ru.hexlet.io/courses",
+    "test": "DEBUG=page-loader,axios,nock jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/Mark-Gruzdov/backend-project-4#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "eslint": "^9.19.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^28.11.0",
@@ -30,8 +32,11 @@
   },
   "dependencies": {
     "axios": "^1.7.9",
+    "axios-debug-log": "^1.0.0",
     "cheerio": "^1.0.0",
     "commander": "^13.1.0",
+    "debug": "^4.4.0",
+    "listr": "^0.14.3",
     "lodash": "^4.17.21",
     "rimraf": "^6.0.1"
   }
