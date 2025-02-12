@@ -114,12 +114,6 @@ test('access directory error', async () => {
   fs.mkdir.mockRestore();
 });
 
-// test('access directory error', async () => {
-//   const notAccessiblePath = '/var/backups';
-//   await expect(pageLoader(mockUrl, notAccessiblePath))
-//     .rejects.toThrow(`Directory: ${notAccessiblePath} not exists or has no access`);
-// });
-
 test('not exists directory', async () => {
   const notExistDir = './test';
   await expect(pageLoader(mockUrl, notExistDir))
