@@ -21,12 +21,13 @@ export const getHtmlFileName = (url) => {
   return `${urlWithoutProtocol.replace(/[^\w]/g, '-')}.html`;
 };
 
-export const getLocalAssets = (html, tag, sourceAttr, url) => html(tag).filter(function filterAssets() {
-  if (html(this).attr(sourceAttr)) {
-    return html(this).attr(sourceAttr).startsWith(url.origin)
-    || html(this).attr(sourceAttr).startsWith('/')
-    || html(this).attr(sourceAttr).startsWith(url.pathname);
-  }
+export const getLocalAssets = (html, tag, sourceAttr, url) => html(tag)
+  .filter(function filterAssets() {
+    if (html(this).attr(sourceAttr)) {
+      return html(this).attr(sourceAttr).startsWith(url.origin)
+      || html(this).attr(sourceAttr).startsWith('/')
+      || html(this).attr(sourceAttr).startsWith(url.pathname);
+    }
 
   return false;
 });

@@ -82,17 +82,23 @@ test('images folder is created', async () => {
 
 test('css file is correctly created', async () => {
   const resultPath = await pageLoader(mockUrl, tempDir);
-  await checkFile(path.join(tempDir, getFolderName(resultPath), path.basename(mockCssPath)), mockCssPath);
+  const folderName = getFolderName(resultPath);
+  const fileName = path.basename(mockCssPath);
+  await checkFile(path.join(tempDir, folderName, fileName), mockCssPath);
 });
 
 test('js file is correctly created', async () => {
   const resultPath = await pageLoader(mockUrl, tempDir);
-  await checkFile(path.join(tempDir, getFolderName(resultPath), path.basename(mockJsPath)), mockJsPath);
+  const folderName = getFolderName(resultPath);
+  const fileName = path.basename(mockJsPath);
+  await checkFile(path.join(tempDir, folderName, fileName), mockJsPath);
 });
 
 test('html file is correctly created', async () => {
   const resultPath = await pageLoader(mockUrl, tempDir);
-  await checkFile(path.join(tempDir, getFolderName(resultPath), path.basename(mockHtmlPath)), mockHtmlPath);
+  const folderName = getFolderName(resultPath);
+  const fileName = path.basename(mockHtmlPath);
+  await checkFile(path.join(tempDir, folderName, fileName), mockHtmlPath);
 });
 
 test('catch error with wrong url', async () => {
