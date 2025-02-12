@@ -5,7 +5,7 @@ import { promises as fs } from 'fs';
 import * as cheerio from 'cheerio';
 import nock from 'nock';
 import {
-  test, expect, beforeEach, beforeAll,
+  test, expect, beforeEach, beforeAll, jest
 } from '@jest/globals';
 import {
   getHtmlFileName, pageLoader, getFolderName, getAbsolutePath, getLocalAssets,
@@ -105,10 +105,20 @@ test('catch error with wrong url', async () => {
 });
 
 test('access directory error', async () => {
-  const notAccessiblePath = '/var/backups';
+  jest.spyOn(fs, 'mkdir').mockRejectedValue(new Error('EACCES: permission denied'));
+  
+  const notAccessiblePath = '/some/protected-path';
   await expect(pageLoader(mockUrl, notAccessiblePath))
     .rejects.toThrow(`Directory: ${notAccessiblePath} not exists or has no access`);
+
+  fs.mkdir.mockRestore();
 });
+
+// test('access directory error', async () => {
+//   const notAccessiblePath = '/var/backups';
+//   await expect(pageLoader(mockUrl, notAccessiblePath))
+//     .rejects.toThrow(`Directory: ${notAccessiblePath} not exists or has no access`);
+// });
 
 test('not exists directory', async () => {
   const notExistDir = './test';
